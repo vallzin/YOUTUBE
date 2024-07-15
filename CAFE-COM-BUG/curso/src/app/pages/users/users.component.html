@@ -1,0 +1,18 @@
+<div class="row">
+  <app-user-card *ngFor="let user of users" [user]="user" class="col-md">
+
+  </app-user-card>
+</div>
+
+
+<!-- <ul class="list-button">
+  <li class="mb-2" *ngFor="let user of users">
+    <button class="btn btn-primary" [routerLink]="'/users/details'"
+    [queryParams]="{
+      username: user
+    }"
+    >{{user}}
+  </button>
+  </li>
+
+</ul> -->
