@@ -67,18 +67,21 @@
     </div>
   </article> -->
 <!-- </section> -->
-<section class="event-binding">
-  <article>
+
+<!-- <section class="event-binding"> -->
+  <!-- <article>
     <h3>Event Binding</h3>
     <div>
       <button (click)="botaoClicado()" class="btn btn-primary">Click-me</button>
-      <br><br>
-      <!-- <input type="text"
+      <br><br> -->
+      <!--
+      erro no $event.target.value
+      input type="text"
       (keyup)="onKeyUp($event)"
       (keyup.enter)="salvarValor($event.target.value)"
-      (blur)="salvarValor($event.target.value)"
-      /> -->
-      <input type="text"
+      (blur)="salvarValor($event.target.value)"/>
+       -->
+      <!-- <input type="text"
       (keyup)="onKeyUp($event)"
       (keyup.enter)="salvarValor(campoInput.value)"
       (blur)="salvarValor(campoInput.value)"
@@ -86,13 +89,44 @@
       />
       <p>Valor atual: {{ valorAtual }}</p>
       <p>Valor salvo: {{ valorSalvo }}</p>
-      <br><br>
+      <br><br> -->
 
-      <span
+      <!-- <span
       (mouseover)="onMouseOverOut()"
       (mouseout)="onMouseOverOut()"
       [class.highlight]="isMouseOver"
       >Passe o mouse sobre mim</span>
     </div>
   </article>
-</section>
+</section> -->
+<!-- <section>
+  <article>
+    <h3>Two-way data binding</h3>
+    <div>
+       erro no $event.target.value
+      <input type="text"
+        [value]="nome"
+        (input)="nome = $event.target.value"
+      > -->
+      <!-- <input type="text"
+        [value]="nome"
+        (input)="nome = evento.value"#evento>
+      <p>Você digitou: {{ nome }}</p>
+
+      <input type="text"
+        [ngModel]="nome"
+        (ngModelChange)="nome = $event"
+        >
+      <p>Você atualizou o que digitou: {{ nome }}</p> -->
+      <!-- importar o FormsModel no app.Module.ts para o two-way data-binding funcionar -->
+      <!-- <input type="text" [value]="nome" [(ngModel)]="nome">
+      <p>Você digitou {{ nome }}</p>
+    </div>
+    <div>
+      <input type="text" [(ngModel)]="pessoa.nome">
+      <input type="text" [(ngModel)]="pessoa.idade">
+      <p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos de idade. </p>
+    </div>
+  </article> -->
+<!-- </section> -->
+<app-meu-form></app-meu-form>
