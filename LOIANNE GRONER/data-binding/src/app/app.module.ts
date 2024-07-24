@@ -9,12 +9,14 @@ import { AlertModule } from 'ngx-bootstrap/alert';
 import { FormsModule } from '@angular/forms';
 import { MeuFormModule } from './meu-form/meu-form.module';
 import { InputPropetyComponent } from './input-propety/input-propety.component';
+import { OutputPropertyComponent } from './output-property/output-property.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBindingComponent,
-    InputPropetyComponent
+    InputPropetyComponent,
+    OutputPropertyComponent
   ],
   imports: [
     FormsModule,
