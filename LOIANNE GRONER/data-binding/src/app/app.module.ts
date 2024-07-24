@@ -7,13 +7,14 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { FormsModule } from '@angular/forms';
-import { MeuFormComponent } from './meu-form/meu-form.component';
 import { MeuFormModule } from './meu-form/meu-form.module';
+import { InputPropetyComponent } from './input-propety/input-propety.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    InputPropetyComponent
   ],
   imports: [
     FormsModule,
