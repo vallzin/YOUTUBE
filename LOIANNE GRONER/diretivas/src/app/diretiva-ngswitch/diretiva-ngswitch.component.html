@@ -1,0 +1,73 @@
+<!-- usando class.ative -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="nav navbar-nav">
+    <a
+      class="nav-item nav-link"
+      [class.active]="aba == 'home'"
+      (click)="aba = 'home'"
+      >Home</a
+    >
+    <a
+      class="nav-item nav-link"
+      [class.active]="aba == 'contato'"
+      (click)="aba = 'contato'"
+      >Contato</a
+    >
+    <a
+      class="nav-item nav-link"
+      [class.active]="aba == 'sobre'"
+      (click)="aba = 'sobre'"
+      >Sobre</a
+    >
+  </div>
+</nav>
+<hr />
+<!-- usando ngClass -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="nav navbar-nav" >
+    <a
+      class="nav-item nav-link"
+      [ngClass]="{active: aba == 'home1'}"
+      (click)="aba = 'home1'"
+      >Home</a
+    >
+    <a
+      class="nav-item nav-link"
+      [ngClass]="{active: aba == 'contato1'}"
+      (click)="aba = 'contato1'"
+      >Contato</a
+    >
+    <a
+      class="nav-item nav-link"
+      [ngClass]="{active: aba == 'sobre1'}"
+      (click)="aba = 'sobre1'"
+      >Sobre</a
+    >
+  </div>
+</nav>
+<hr />
+<!-- usando o ngSwitch -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="nav navbar-nav">
+        <a
+        class="nav-item nav-link"
+        [class.active]="aba == 'home2'"
+        (click)="aba = 'home2'"
+        >Home</a>
+        <a class="nav-item nav-link"
+        [class.active]="aba == 'features'"
+        (click)="aba = 'features'"
+        >Features</a>
+        <a
+          class="nav-item nav-link"
+          [class.active]="aba == 'pricing'"
+          (click)="aba = 'pricing'"
+          >Pricing</a
+        >
+  </div>
+</nav>
+<div class="container" [ngSwitch]="aba">
+  <p *ngSwitchCase="'home2'">Home Ativado</p>
+  <p *ngSwitchCase="'features'">Features Ativado</p>
+  <p *ngSwitchCase="'pricing'">Pricing Ativado</p>
+</div>
