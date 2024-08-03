@@ -1,0 +1,15 @@
+<p>diretiva-ngfor works!</p>
+
+<ul>
+  <li *ngFor="let c of cursos">{{ c }}</li>
+</ul>
+<br>
+<hr>
+<ul>
+  <li *ngFor="let c of cursos, let i = index">{{ i }} - {{ c }}</li>
+</ul>
+<br>
+<hr>
+<ul>
+  <li *ngFor="let c of cursos; index as i">{{ i }} - {{ c }}</li>
+</ul>
