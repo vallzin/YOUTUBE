@@ -1,5 +1,5 @@
-<h1 [ngStyle]="{'color':'green'}">Aprendendo a diretiva hgStyle</h1>
-<h1 [ngStyle]="{'color':condicao ? 'green' : 'pink'}">Aprendendo a diretiva hgStyle</h1>
+<h1 [ngStyle]="{'color':'green'}">Aprendendo a diretiva ngStyle</h1>
+<h1 [ngStyle]="{'color':condicao ? 'green' : 'pink'}">Aprendendo a diretiva ngStyle</h1>
 <ul>
   <li *ngFor="let l of lista">{{ l }}</li>
 </ul>
@@ -10,6 +10,7 @@
 </ul>
 <br>
 <hr>
+<h1>Aprendendo a diretiva ngClass</h1>
 <ul>
   <li *ngFor="let l of lista" [ngClass]="l == 'Aprovado' ? 'fontVerde' : 'fontVermelha' ">{{ l }}</li>
 </ul>

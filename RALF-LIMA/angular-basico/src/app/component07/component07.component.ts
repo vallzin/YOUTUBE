@@ -12,6 +12,8 @@ export class Component07Component {
 
   condicao:boolean = false;
 
+  cor: string = 'purple';
+
   lista: string[]=['Aprovado', 'Aprovado', 'Reprovado'];
 
 }
