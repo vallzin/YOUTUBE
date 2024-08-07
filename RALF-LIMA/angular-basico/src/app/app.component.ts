@@ -11,6 +11,7 @@ import { Component07Component } from "./component07/component07.component";
 import { Component08Component } from "./component08/component08.component";
 import { Component09Component } from "./component09/component09.component";
 import { Component10Component } from "./component10/component10.component";
+import { Component11Component } from "./component11/component11.component";
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,8 @@ import { Component10Component } from "./component10/component10.component";
     Component07Component,
     Component08Component,
     Component09Component,
-    Component10Component
+    Component10Component,
+    Component11Component
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
