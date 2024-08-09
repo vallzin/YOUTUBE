@@ -1,5 +1,5 @@
 export class Pessoa{
-  nome:String;
+  nome:string;
   idade:number;
   cidade:string;
 }
