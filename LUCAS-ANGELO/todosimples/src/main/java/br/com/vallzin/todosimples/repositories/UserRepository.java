@@ -7,7 +7,7 @@ import br.com.vallzin.todosimples.models.User;
 
 
 @Repository
-public interface UserRepositories extends JpaRepository<User, Long>{
+public interface UserRepository extends JpaRepository<User, Long>{
 
     
 }
