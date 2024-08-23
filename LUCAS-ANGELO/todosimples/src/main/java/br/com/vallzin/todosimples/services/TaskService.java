@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import br.com.vallzin.todosimples.models.Task;
 import br.com.vallzin.todosimples.models.User;
 import br.com.vallzin.todosimples.repositories.TaskRepository;
+import br.com.vallzin.todosimples.services.execptions.DataBindingViolationException;
+import br.com.vallzin.todosimples.services.execptions.ObjectNotFoundException;
 import jakarta.transaction.Transactional;
 
 @Service
@@ -22,7 +24,8 @@ public class TaskService {
 
     public Task findById(Long id){
         Optional<Task> task = this.taskRepository.findById(id);
-        return task.orElseThrow(() -> new RuntimeException("Tarefa não encontrada! Id: "+id+", Tipo: "+ Task.class.getName()));
+        return task.orElseThrow(() -> new ObjectNotFoundException(
+            "Tarefa não encontrada! Id: "+id+", Tipo: "+ Task.class.getName()));
     }
 
     public List<Task> findAllByUserId(Long userId){
@@ -51,7 +54,8 @@ public class TaskService {
         try {
             this.taskRepository.deleteById(id);
         } catch (Exception e) {
-            throw new RuntimeException("Não é possível excluir pois há entidades realacionadas!");
+            throw new DataBindingViolationException
+            ("Não é possível excluir pois há entidades realacionadas!");
         }
     }
     
