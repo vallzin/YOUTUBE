@@ -20,7 +20,6 @@ import java.util.stream.Collectors;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
-import static br.com.vallzin.todosimples.models.enums.ProfileEnum.*;
 
 @Entity
 @Table(name = "User.TABLE_NAME")
@@ -31,9 +30,6 @@ import static br.com.vallzin.todosimples.models.enums.ProfileEnum.*;
 @EqualsAndHashCode
 public class User {
 
-//    private static Object apply(Integer x) {
-//        return toEnum(x).collect(Collectors.toSet());
-//    }
 
     public interface CreateUser {}
     public interface UpdateUser {}
