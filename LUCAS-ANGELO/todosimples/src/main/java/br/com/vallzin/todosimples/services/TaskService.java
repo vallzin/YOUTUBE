@@ -1,17 +1,18 @@
 package br.com.vallzin.todosimples.services;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import br.com.vallzin.todosimples.models.Task;
 import br.com.vallzin.todosimples.models.User;
 import br.com.vallzin.todosimples.repositories.TaskRepository;
 import br.com.vallzin.todosimples.services.execptions.DataBindingViolationException;
-import br.com.vallzin.todosimples.services.execptions.ObjectNotFoundException;
-import jakarta.transaction.Transactional;
+
 
 @Service
 public class TaskService {
@@ -24,11 +25,12 @@ public class TaskService {
 
     public Task findById(Long id){
         Optional<Task> task = this.taskRepository.findById(id);
-        return task.orElseThrow(() -> new ObjectNotFoundException(
-            "Tarefa não encontrada! Id: "+id+", Tipo: "+ Task.class.getName()));
+        return task.orElseThrow(() ->new RuntimeException(
+                "Tarefa não encontrada. Id: " + id + ", Tipo: "+ User.class.getName()
+        ));
     }
 
-    public List<Task> findAllByUserId(Long userId){
+    public List<Task> findAllByUserId(Long userId) {
         List<Task> tasks = this.taskRepository.findByUser_Id(userId);
         return tasks;
     }
@@ -58,5 +60,4 @@ public class TaskService {
             ("Não é possível excluir pois há entidades realacionadas!");
         }
     }
-    
 }

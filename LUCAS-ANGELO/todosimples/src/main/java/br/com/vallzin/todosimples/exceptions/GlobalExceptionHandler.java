@@ -1,12 +1,13 @@
 package br.com.vallzin.todosimples.exceptions;
 
 import java.io.IOException;
+
 import java.nio.file.AccessDeniedException;
 
 import javax.naming.AuthenticationException;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
-import org.hibernate.ObjectNotFoundException;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpHeaders;
@@ -20,30 +21,35 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import br.com.vallzin.todosimples.services.execptions.ObjectNotFoundException;
 import br.com.vallzin.todosimples.services.execptions.AuthenticationFailureHandler;
 import br.com.vallzin.todosimples.services.execptions.AuthorizationException;
 import br.com.vallzin.todosimples.services.execptions.DataBindingViolationException;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.ConstraintViolationException;
+
 import lombok.extern.slf4j.Slf4j;
 
 
 @Slf4j(topic = "GLOBAL_EXCEPTION_HANDLER")
 @RestControllerAdvice
-public class GlobalExceptionHandler extends ResponseEntityExceptionHandler implements AuthenticationFailureHandler {
+public class GlobalExceptionHandler
+        extends ResponseEntityExceptionHandler
+        implements AuthenticationFailureHandler {
 
     @Value("${server.error.include-exception}")
     private boolean printStackTrace;
 
-    // @Override
+    @Override
     @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
-    protected ResponseEntity<Object> handleMethodArgumentNotValid(
-            MethodArgumentNotValidException methodArgumentNotValidException,
-            HttpHeaders headers,
-            HttpStatus status,
-            WebRequest request) {
+     public ResponseEntity<Object> handleMethodArgumentNotValid(
+             MethodArgumentNotValidException methodArgumentNotValidException,
+             HttpHeaders headers,
+             HttpStatus status,
+             WebRequest request) {
         ErrorResponse errorResponse = new ErrorResponse(
                 HttpStatus.UNPROCESSABLE_ENTITY.value(),
                 "Validation error. Check 'errors' field for details.");
@@ -73,7 +79,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler imple
             DataIntegrityViolationException dataIntegrityViolationException,
             WebRequest request) {
         String errorMessage = dataIntegrityViolationException.getMostSpecificCause().getMessage();
-        log.error("Failed to save entity with integrity problems: " + errorMessage, dataIntegrityViolationException);
+        log.error("Failed to save entity with integrity problems: {}", errorMessage, dataIntegrityViolationException);
         return buildErrorResponse(
                 dataIntegrityViolationException,
                 errorMessage,
@@ -81,7 +87,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler imple
                 request);
     }
 
-    @ExceptionHandler()
+    @ExceptionHandler(ConstraintViolationException.class)
     @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
     public ResponseEntity<Object> handleConstraintViolationException(
             ConstraintViolationException constraintViolationException,
@@ -172,10 +178,10 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler imple
         return ResponseEntity.status(httpStatus).body(errorResponse);
     }
 
-    // @Override
+    @Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
             AuthenticationException exception) throws IOException, ServletException {
-        Integer status = HttpStatus.UNAUTHORIZED.value();
+        int status = HttpStatus.UNAUTHORIZED.value();
         response.setStatus(status);
         response.setContentType("application/json");
         ErrorResponse errorResponse = new ErrorResponse(status, "Username or password are invalid");

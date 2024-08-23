@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.google.gson.Gson;
 
 import lombok.Getter;
@@ -13,6 +14,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @RequiredArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ErrorResponse {
 
     private final int status;
