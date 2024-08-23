@@ -1,12 +1,7 @@
 package br.com.vallzin.todosimples.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import br.com.vallzin.todosimples.models.enums.ProfileEnum;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -17,10 +12,15 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
+
+import static br.com.vallzin.todosimples.models.enums.ProfileEnum.*;
 
 @Entity
 @Table(name = "User.TABLE_NAME")
@@ -30,7 +30,11 @@ import com.fasterxml.jackson.annotation.JsonProperty.Access;
 @Setter
 @EqualsAndHashCode
 public class User {
-    
+
+//    private static Object apply(Integer x) {
+//        return toEnum(x).collect(Collectors.toSet());
+//    }
+
     public interface CreateUser {}
     public interface UpdateUser {}
 
@@ -58,6 +62,19 @@ public class User {
     @OneToMany(mappedBy = "user")
     @JsonProperty(access = Access.WRITE_ONLY)
     private List<Task> tasks = new ArrayList<Task>();
-    
+
+    @ElementCollection(fetch = FetchType.EAGER)
+    @JsonProperty(access = Access.WRITE_ONLY)
+    @CollectionTable(name = "user_profile")
+    @Column(name = "profile", nullable = false)
+    private Set<Integer> profiles = new HashSet<>();
+
+    public Set<ProfileEnum> getProfile(){
+        return this.profiles.stream().map(ProfileEnum::toEnum).collect(Collectors.toSet());
+    }
+
+    public void addProfile(ProfileEnum profileEnum){
+        this.profiles.add(profileEnum.getCode());
+    }
     
 }
