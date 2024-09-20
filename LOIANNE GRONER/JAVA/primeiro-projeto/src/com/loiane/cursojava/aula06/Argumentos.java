@@ -1,4 +1,4 @@
-package aula06;
+package com.loiane.cursojava.aula06;
 
 public class Argumentos {
 

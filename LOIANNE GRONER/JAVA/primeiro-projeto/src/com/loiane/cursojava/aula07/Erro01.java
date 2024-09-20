@@ -1,4 +1,4 @@
-package aula07;
+package com.loiane.cursojava.aula07;
 
 public class Erro01 {
 

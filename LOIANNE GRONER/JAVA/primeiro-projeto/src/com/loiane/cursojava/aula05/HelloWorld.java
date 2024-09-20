@@ -1,4 +1,4 @@
-package aula05;
+package com.loiane.cursojava.aula05;
 
 public class HelloWorld {
 
