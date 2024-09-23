@@ -17,8 +17,9 @@ public class Aula13Exercicio07 {
         System.out.print("Digite o valor do lado: ");
         double lado = sc.nextDouble();
         sc.close();
-        double areaQaud = lado * lado;
-        double dobroArea = areaQaud * areaQaud;
+//        double areaQaud = lado * lado;
+        double areaQuad = Math.pow(lado, 2);
+        double dobroArea = areaQuad * 2;
         System.out.println("O dobro da área do quadrado é " + dobroArea);
     }
 

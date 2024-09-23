@@ -10,10 +10,12 @@ public class Aula13Exercicio08 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Total Salário mês.");
-        System.out.println("Qual o valor do seu salário hora?");
-        double salarioHora = sc.nextDouble();
-        double salarioMes = 30 * salarioHora;
-        System.out.println("O valor do seu salário no mês é de: " + salarioMes);
+        System.out.println("Qual o valor da hora de trabalho?");
+        double valorHora = sc.nextDouble();
+        System.out.println("Quantas horas trabalhada no mês?");
+        double horasTrabalho = sc.nextDouble();
+        double salarioMes = valorHora * horasTrabalho;
+        System.out.println("O salário do mês é de: " + salarioMes);
 
 
     }

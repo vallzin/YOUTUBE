@@ -10,10 +10,11 @@ public class Aula13Exercicio03 {
         * */
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Digite dois números: ");
+        System.out.print("Digite dois números inteiros: ");
         int num1 = sc.nextInt();
         int num2 = sc.nextInt();
         sc.close();
-        System.out.println("A soma dos números é "+ (num1 + num2));
+        int resultado = num1 + num2;
+        System.out.println("A soma dos números é "+ resultado);
     }
 }

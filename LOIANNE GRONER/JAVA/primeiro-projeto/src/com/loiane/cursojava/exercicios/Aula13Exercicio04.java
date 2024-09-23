@@ -13,18 +13,18 @@ public class Aula13Exercicio04 {
 
         System.out.println("Notas Bimeestrais");
         System.out.print("Insira a nota do primeiro bimestre: ");
-        double priBi = sc.nextDouble();
+        double nota1 = sc.nextDouble();
         System.out.print("Insira a nota do segundo bimestre: ");
-        double segBi = sc.nextDouble();
+        double nota2 = sc.nextDouble();
         System.out.print("Insira a nota do terceiro bimestre: ");
-        double terBi = sc.nextDouble();
+        double nota3 = sc.nextDouble();
         System.out.print("Insira a nota do quarto bimestre: ");
-        double qrtBi = sc.nextDouble();
+        double nota4 = sc.nextDouble();
         sc.close();
 
-        double soma = priBi + segBi + terBi + qrtBi;
+        double soma = nota1 + nota2 + nota3 + nota4;
         double media = soma / 4;
-        System.out.println("A média Bimestral é: " + media);
+        System.out.println("A média é: " + media);
 
 
 

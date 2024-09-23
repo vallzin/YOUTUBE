@@ -11,7 +11,7 @@ public class Aula13Exercicio05 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Converter centímetros para metros");
         System.out.print("Digite a medida em centímetros: ");
-        double cent = sc.nextByte();
+        double cent = sc.nextDouble();
         sc.close();
         double centPMetros = cent / 100;
         System.out.println(" " + cent + " equivalem a " + centPMetros + " metros");

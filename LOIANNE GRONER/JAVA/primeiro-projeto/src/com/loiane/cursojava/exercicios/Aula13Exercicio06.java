@@ -1,5 +1,6 @@
 package com.loiane.cursojava.exercicios;
 
+import java.util.Map;
 import java.util.Scanner;
 
 public class Aula13Exercicio06 {
@@ -10,12 +11,13 @@ public class Aula13Exercicio06 {
          */
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Área do Círculo");
+        System.out.println("********* ÁREA DO CÍRCULO *******");
         System.out.print("Digite o comprimento do raio: ");
-        float raio = sc.nextFloat();
+        double raio = sc.nextDouble();
         sc.close();
-        float PI = 3.1415f;
-        float area = PI * (raio * raio);
+//        double PI = 3.1415f;
+//        double area = PI * (raio * raio);
+        double area = Math.PI * Math.pow(raio, 2);
         System.out.println("A área do círculo é: " + area);
 
     }
