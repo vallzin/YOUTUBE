@@ -1,8 +1,8 @@
-package operadores;
+package academy.devdojo.maratonajava.operadores;
 
 public class Aula14Operadores {
     public static void main(String[] args) {
-        //operadores aritméticos
+        //academy.devdojo.maratonajava.operadores aritméticos
         // + - / *
         int num1 = 10;
         int num2 = 20;
@@ -46,7 +46,7 @@ public class Aula14Operadores {
         System.out.println("isDezIgualVinte --> "+ isDezIgualVinte);
         System.out.println("isDezDiferenteVinte --> "+ isDezDiferenteVinte);
 
-        //operadores lógicos
+        //academy.devdojo.maratonajava.operadores lógicos
         //&& -> (AND); || -> (OR); ! -> NEGAÇÃO
         int idade = 29;
         float salario = 3500f;
@@ -63,7 +63,7 @@ public class Aula14Operadores {
                         || (valorTotalContaPoupanca > valorGame);
         System.out.println("isGameCompravel " + isGameCompravel);
 
-//      operadores de atribuição
+//      academy.devdojo.maratonajava.operadores de atribuição
 //      += ; -=; *=; /=
         double bonus = 2000;
         bonus += 1000;
