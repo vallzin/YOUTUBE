@@ -64,8 +64,8 @@ public class Aula17Exercicio05 {
         }while (!valido);
 
         do {
-            popA += (int) (popA * txA) / 100;
-            popB += (int) ((popB * txB) / 100);
+            popA += (popA * txA) / 100;
+            popB += ((popB * txB) / 100);
             ano++;
 
         }while(popA < popB);
