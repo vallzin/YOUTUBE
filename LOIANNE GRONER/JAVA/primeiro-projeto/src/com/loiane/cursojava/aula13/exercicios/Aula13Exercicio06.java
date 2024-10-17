@@ -1,6 +1,5 @@
-package com.loiane.cursojava.exercicios;
+package com.loiane.cursojava.aula13.exercicios;
 
-import java.util.Map;
 import java.util.Scanner;
 
 public class Aula13Exercicio06 {

@@ -1,4 +1,4 @@
-package com.loiane.cursojava.exercicios;
+package com.loiane.cursojava.aula13.exercicios;
 
 import java.util.Scanner;
 import java.util.Locale;
