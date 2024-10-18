@@ -38,7 +38,6 @@ public class Aula19Exercicio08 {
         System.out.print(vetorC[i] + " ");
     }
 
-
     }
 
 }

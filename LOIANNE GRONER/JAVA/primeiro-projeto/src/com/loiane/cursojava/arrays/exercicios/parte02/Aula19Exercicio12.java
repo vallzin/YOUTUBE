@@ -1,0 +1,29 @@
+package com.loiane.cursojava.arrays.exercicios.parte02;
+
+import java.util.Scanner;
+
+public class Aula19Exercicio12 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[] vetorA = new int[10];
+
+        for (int i = 0; i < vetorA.length; i++){
+            System.out.print("Digite o valor do array na posição " + i+" ");
+            vetorA[i] = sc.nextInt();
+        }
+        int somaValores = 0;
+        for (int i = 0; i < vetorA.length; i++){
+            somaValores += vetorA[i];
+        }
+
+        System.out.print("Vetor A = ");
+        for (int i = 0; i < vetorA.length; i++){
+            System.out.print(vetorA[i] + " ");
+        }
+        System.out.println("\nA soma dos valores do array é "+ somaValores);
+
+    }
+
+}
