@@ -1,4 +1,4 @@
-package com.loiane.cursojava.arrays.exercicios.parte3;
+package com.loiane.cursojava.arrays.exercicios.parte04;
 
 import java.util.Scanner;
 
@@ -18,9 +18,6 @@ public class Aula19Exercicio23 {
                 System.out.println("Número ímpar");
                 break;
             }
-
         }
-
     }
-
 }

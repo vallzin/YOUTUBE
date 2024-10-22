@@ -1,4 +1,4 @@
-package com.loiane.cursojava.arrays.exercicios.parte3;
+package com.loiane.cursojava.arrays.exercicios.parte03;
 
 import java.util.Scanner;
 

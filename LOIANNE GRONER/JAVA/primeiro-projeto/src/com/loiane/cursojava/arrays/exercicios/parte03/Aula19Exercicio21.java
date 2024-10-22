@@ -1,6 +1,4 @@
-package com.loiane.cursojava.arrays.exercicios.parte3;
-
-import java.util.Scanner;
+package com.loiane.cursojava.arrays.exercicios.parte03;
 
 public class Aula19Exercicio21 {
 
