@@ -1,33 +1,23 @@
-package com.loiane.cursojava.orientcaoobjeto.classesatributos.exercicios;
+package com.loiane.cursojava.orientcaoobjeto.classesmetodos.classesatributos.exercicios;
 
-import java.util.Date;
-
-public class LivroBibliotecaTest {
+public class LivroDeLivrariaTest {
     public static void main(String[] args) {
 
-        LivroBiblioteca livro = new LivroBiblioteca();
+        LivroDeLivraria livro = new LivroDeLivraria();
         livro.nome = "Aplicando Java no dia-a-dia";
         livro.autor = "valmilson";
         livro.qtdPaginas= 5000;
         livro.anoLancamento = 2025;
         livro.isbn = "ISBN 987 - 654 - 321 - 0";
-
-        livro.alugado = true;
-        livro.emprestadoA = "Maria";
-        livro.dataEntrega = new Date();
+        livro.preco = 63.89;
 
         System.out.println();
         System.out.println("Título: "+livro.nome);
         System.out.println("ISBN: "+livro.isbn);
         System.out.println("Autor: "+livro.autor);
-        System.out.println("livro empretado para: "+ livro.emprestadoA);
-        System.out.println("Data: "+livro.dataEntrega);
-
-
-
+        System.out.println("Quantidades de páginas: "+livro.qtdPaginas);
+        System.out.println("Preço do livro: R$"+livro.preco);
 
     }
-
-
-
 }
+

@@ -1,4 +1,4 @@
-package com.loiane.cursojava.orientcaoobjeto.classesatributos;
+package com.loiane.cursojava.orientcaoobjeto.classesmetodos.classesatributos;
 
 public class Carro {
 

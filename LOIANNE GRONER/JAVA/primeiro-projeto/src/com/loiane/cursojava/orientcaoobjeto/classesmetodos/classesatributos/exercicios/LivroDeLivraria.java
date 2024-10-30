@@ -1,4 +1,4 @@
-package com.loiane.cursojava.orientcaoobjeto.classesatributos.exercicios;
+package com.loiane.cursojava.orientcaoobjeto.classesmetodos.classesatributos.exercicios;
 
 public class LivroDeLivraria {
 
