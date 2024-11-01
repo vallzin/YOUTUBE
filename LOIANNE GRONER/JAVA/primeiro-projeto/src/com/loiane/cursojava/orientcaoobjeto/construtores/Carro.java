@@ -1,4 +1,4 @@
-package com.loiane.cursojava.construtores;
+package com.loiane.cursojava.orientcaoobjeto.construtores;
 
 public class Carro {
     public String marca;
@@ -19,6 +19,7 @@ public class Carro {
         capCombustivel = capCombustivel_;
         consCombustivel = consCombustivel_;
     }
+
 
     public void exibirAutonomia(){
         System.out.println("A autonomia do carro é: "+ capCombustivel * consCombustivel + "Km");
