@@ -1,4 +1,4 @@
-package com.loiane.cursojava.orientcaoobjeto.exercicioaula28a33;
+package com.loiane.cursojava.orientcaoobjeto.aula28a33.exercicios;
 
 public class Lampada {
     private String modelo;

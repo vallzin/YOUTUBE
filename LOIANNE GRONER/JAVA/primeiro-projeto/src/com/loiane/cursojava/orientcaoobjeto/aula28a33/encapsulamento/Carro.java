@@ -1,4 +1,4 @@
-package com.loiane.cursojava.orientcaoobjeto.encapsulamento;
+package com.loiane.cursojava.orientcaoobjeto.aula28a33.encapsulamento;
 
 public class Carro {
     private String marca;//default
