@@ -11,6 +11,7 @@ public class CalculadoraFatorialTest {
         Scanner sc = new Scanner(System.in);
 
         int num;
+        //método não recursivo
         do {
             System.out.print("Digite um número positivo: ");
             num = sc.nextInt();
