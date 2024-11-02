@@ -15,7 +15,7 @@ public class Carro {//public visto por todos
         this.consCombustivel = consCombustivel;
     }
 
-    private Carro() {
+    Carro() {
     }
 
     public Carro(String marca, String modelo, int numPassageiros) {
