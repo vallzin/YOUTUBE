@@ -10,9 +10,12 @@ public class AgendaTest {
         String nome = sc.nextLine();
 
         Agenda agenda = new Agenda(nome);
-        //outras formas
-        //Agenda agenda = new Agenda();
-        //agenda.setNome(nome);
+        /*
+        outras formas
+        Agenda agenda = new Agenda();
+        agenda.setNome(nome);
+
+         */
 
         Contato[] contatos = new Contato[3];
         for (int i = 0; i < contatos.length; i++){
