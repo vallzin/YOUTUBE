@@ -5,7 +5,7 @@ public class Carro {
     private double velocidadeMax;
 //    modificador de acesso 'static' sempre vem antes do tipo
 //    o atributo pertence a classe e não mais ao objeto
-    public static double velocidadeLim = 250;
+    private static double velocidadeLim = 250;
 
     public Carro(String nome, double velocidadeMax){
         this.nome = nome;
@@ -17,6 +17,14 @@ public class Carro {
         System.out.println("Nome: "+this.nome);
         System.out.println("Velocidade Máxima: "+this.velocidadeMax);
         System.out.println("Velocidade Limite: "+Carro.velocidadeLim);
+    }
+
+    public static void setVelocidadeLim(double velocidadeLim){
+        Carro.velocidadeLim = velocidadeLim;
+    }
+
+    public static double getVelocidadeLim(){
+        return velocidadeLim;
     }
 
     public String getNome() {

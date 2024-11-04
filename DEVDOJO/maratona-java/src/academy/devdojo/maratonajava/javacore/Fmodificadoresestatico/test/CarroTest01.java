@@ -5,13 +5,16 @@ import academy.devdojo.maratonajava.javacore.Fmodificadoresestatico.dominio.Carr
 public class CarroTest01 {
     public static void main(String[] args) {
 
+        Carro.setVelocidadeLim(180);
+
         Carro c1 = new Carro("BMW", 280);
         Carro c2 = new Carro("Mercedez", 275);
         Carro c3 = new Carro("Audi", 290);
 
-        System.out.println(Carro.velocidadeLim);
-        Carro.velocidadeLim = 180;
-        System.out.println(Carro.velocidadeLim);
+//        System.out.println(Carro.velocidadeLim);
+//        Carro.velocidadeLim = 180;
+//        System.out.println(Carro.velocidadeLim);
+        System.out.println(Carro.getVelocidadeLim());
 
         c1.imprimirCarro();
         c2.imprimirCarro();
