@@ -12,6 +12,7 @@ public class PessoaTest01 {
         pessoa.setIdade(80);
 
 //        pessoa.ImprimirPessoa();
+        pessoa.ImprimirPessoa();
 
         System.out.println(pessoa.getNome());
         System.out.println(pessoa.getIdade());

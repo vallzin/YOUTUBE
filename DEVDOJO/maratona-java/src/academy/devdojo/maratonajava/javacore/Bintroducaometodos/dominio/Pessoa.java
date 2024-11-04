@@ -5,9 +5,16 @@ public class Pessoa {
     private String nome;
     private int idade;
 
+//  Assinatura de um método é um contrato
     public void ImprimirPessoa(){
-        System.out.println(this.nome);
-        System.out.println(this.idade);
+//        forma correta de acesso para impressão
+//        System.out.println(this.nome);
+//      não usar dessa forma
+        System.out.println(getNome());
+//        forma correta de acesso para impressão
+//        System.out.println(this.idade);
+//      não usar dessa forma
+        System.out.println(getIdade());
     }
 
     public void setNome(String nome){
