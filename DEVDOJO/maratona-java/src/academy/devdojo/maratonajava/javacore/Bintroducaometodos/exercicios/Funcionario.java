@@ -2,9 +2,10 @@ package academy.devdojo.maratonajava.javacore.Bintroducaometodos.exercicios;
 
 public class Funcionario {
 
-    public String nome;
-    public int idade;
-    public double[] salarios;
+    private String nome;
+    private int idade;
+    private double[] salarios;
+    private double media;
 
 //    public void imprimir1(){
 //        System.out.println(this.nome);
@@ -14,7 +15,36 @@ public class Funcionario {
 //        System.out.println(this.salarios[2]);
 //    }
 
-//  refatoração do método imprimir1
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public double[] getSalarios() {
+        return salarios;
+    }
+
+    public void setSalarios(double[] salarios) {
+        this.salarios = salarios;
+    }
+
+    public double getMedia() {
+        return media;
+    }
+
+    //  refatoração do método imprimir1
     public void imprimir2(){
 
         if (salarios == null){return;}
@@ -41,7 +71,8 @@ public class Funcionario {
             soma += salario;
         }
 
-        double media = soma / salarios.length;
+        media = soma / salarios.length;
+
         System.out.println("\nMédia salarial " + media);
 
         }
