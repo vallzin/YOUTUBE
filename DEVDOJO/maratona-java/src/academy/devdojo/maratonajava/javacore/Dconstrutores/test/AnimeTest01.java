@@ -1,19 +1,13 @@
-package academy.devdojo.maratonajava.javacore.Csobrecargametodos.test;
+package academy.devdojo.maratonajava.javacore.Dconstrutores.test;
 
-import academy.devdojo.maratonajava.javacore.Csobrecargametodos.dominio.Anime;
+import academy.devdojo.maratonajava.javacore.Dconstrutores.dominio.Anime;
+
 
 public class AnimeTest01 {
     public static void main(String[] args) {
-        Anime anime = new Anime();
 
-//        anime.init("Akudama Drive", "TV", 12);
-        anime.init("Akudama Drive", "TV", 12, "Ação");
-//        anime.setGenero("Ação");
-//        anime.setNome("Akudama Drive");
-//        anime.setTipo("TV");
-//        anime.setEpisodios(12);
+        Anime anime = new Anime("Sasuke", "TV", 20, "Ação","Produção DevDojo");
 
         anime.imprimirAnime();
-
     }
 }
