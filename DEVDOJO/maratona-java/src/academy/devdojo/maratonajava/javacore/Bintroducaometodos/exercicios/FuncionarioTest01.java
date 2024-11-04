@@ -6,7 +6,7 @@ public class FuncionarioTest01 {
         funcionario.setNome("Carlos");
         funcionario.setIdade(25);
         funcionario.setSalarios(new double[]{1200, 900, 987.32});
-        funcionario.getMedia();
+        funcionario.getMedia( );
 
         System.out.println();
         funcionario.imprimir2();
