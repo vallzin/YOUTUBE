@@ -6,9 +6,9 @@ public class CalculadoraTest05 {
     public static void main(String[] args) {
         Calculadora calculadora = new Calculadora();
         int[] numeros = {1,2,3,4,5};
-        calculadora.somaArray(numeros);
-        calculadora.somaArray(new int[]{1,2,3,4,5});
-        calculadora.somaVarArgs(numeros);
-        calculadora.somaVarArgs(1,2,3,4,5,6,7,8,9,10);
+        calculadora.somarArray(numeros);
+        calculadora.somarArray(new int[]{1,2,3,4,5});
+        calculadora.somarVarArgs(numeros);
+        calculadora.somarVarArgs(1,2,3,4,5,6,7,8,9,10);
     }
 }

@@ -18,8 +18,8 @@ public class EstudanteTest01 {
         estudante02.idade = 16;
         estudante02.sexo = 'F';
 
-        impressora.imprime(estudante01);
-        impressora.imprime(estudante02);
+        impressora.imprimir(estudante01);
+        impressora.imprimir(estudante02);
 
 
 

@@ -6,7 +6,16 @@ public class Funcionario {
     public int idade;
     public double[] salarios;
 
-    public void imprime(){
+//    public void imprimir1(){
+//        System.out.println(this.nome);
+//        System.out.println(this.idade);
+//        System.out.println(this.salarios[0]);
+//        System.out.println(this.salarios[1]);
+//        System.out.println(this.salarios[2]);
+//    }
+
+//  refatoração do método imprimir1
+    public void imprimir2(){
 
         if (salarios == null){return;}
 
@@ -14,25 +23,25 @@ public class Funcionario {
         System.out.println(this.idade);
 
         for (double salario : salarios){
-            System.out.println(salario+" ");
+            System.out.print(salario+" ");
         }
-        ImprimeMediaSalario();
+        //chamando o método para cria um pequeno relatório
+        ImprimirMediaSalario();
 
     }
 
 
-    public void ImprimeMediaSalario(){
+    public void ImprimirMediaSalario(){
 
         if (salarios == null) {return;}
 
         double soma = 0;
-        double media = 0;
 
         for (double salario : salarios) {
             soma += salario;
         }
 
-        media = soma / salarios.length;
+        double media = soma / salarios.length;
         System.out.println("\nMédia salarial " + media);
 
         }

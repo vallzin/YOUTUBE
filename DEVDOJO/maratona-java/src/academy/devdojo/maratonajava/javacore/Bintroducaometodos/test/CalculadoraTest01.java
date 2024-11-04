@@ -7,11 +7,11 @@ public class CalculadoraTest01 {
 
         Calculadora calculadora = new Calculadora();
 
-        calculadora.somaDoisNumeros();
+        calculadora.somarDoisNumeros();
         System.out.println("Finalizando CalculadoraTest01");
 
         System.out.println();
-        calculadora.subtraiDoisNumeros();
+        calculadora.subtrairDoisNumeros();
 
     }
 }

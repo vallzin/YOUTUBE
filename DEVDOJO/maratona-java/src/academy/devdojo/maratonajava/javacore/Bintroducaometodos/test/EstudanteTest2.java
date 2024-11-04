@@ -8,7 +8,7 @@ public class EstudanteTest2 {
 
         Estudante estudante01 = new Estudante();
         Estudante estudante02 = new Estudante();
-        ImpressoraEstudante impressora = new ImpressoraEstudante();
+//        ImpressoraEstudante impressora = new ImpressoraEstudante();
 
         estudante01.nome = "Midoriya";
         estudante01.idade = 15;
@@ -18,8 +18,8 @@ public class EstudanteTest2 {
         estudante02.idade = 16;
         estudante02.sexo = 'F';
 
-        estudante01.imprime();
-        estudante02.imprime();
+        estudante01.imprimir();
+        estudante02.imprimir();
 
 
 

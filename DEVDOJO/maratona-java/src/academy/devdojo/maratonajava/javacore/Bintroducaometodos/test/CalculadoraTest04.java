@@ -8,7 +8,7 @@ public class CalculadoraTest04 {
         Calculadora calculadora = new Calculadora();
         int a = 1;
         int b = 2;
-        calculadora.alteraDoiNumeros(a, b);
+        calculadora.alterarDoiNumeros(a, b);
         System.out.println("Dentro CalculadoraTest04");
         System.out.println("Num1: "+ a);
         System.out.println("Num2: "+ b);

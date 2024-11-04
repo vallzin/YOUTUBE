@@ -8,8 +8,8 @@ public class ExercicioTest01 {
         funcionario.salarios = new double[]{1200, 900, 987.32};
 
         System.out.println();
-        funcionario.imprime();
-//        funcionario.ImprimeMediaSalario();
+        funcionario.imprimir2();
+//        funcionario.ImprimirMediaSalario();
 
     }
 }

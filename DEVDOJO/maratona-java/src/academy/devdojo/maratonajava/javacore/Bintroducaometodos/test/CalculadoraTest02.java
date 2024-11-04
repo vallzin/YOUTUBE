@@ -8,7 +8,7 @@ public class CalculadoraTest02 {
         Calculadora calculadora = new Calculadora();
 
         //dentro dos parêntesis ficam os argumentos
-        calculadora.multiplicaDoisNumeros(10, 20);
+        calculadora.multiplicarDoisNumeros(10, 20);
 
     }
 }
