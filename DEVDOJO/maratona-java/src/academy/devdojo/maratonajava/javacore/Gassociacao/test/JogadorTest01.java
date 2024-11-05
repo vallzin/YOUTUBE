@@ -13,7 +13,7 @@ public class JogadorTest01 {
         Jogador[] jogadores = {j1, j2, j3};
 
         for (Jogador j : jogadores){
-            j.imprimir();
+            j.imprimirJogador();
         }
 
     }

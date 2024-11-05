@@ -2,21 +2,39 @@ package academy.devdojo.maratonajava.javacore.Gassociacao.dominio;
 
 public class Jogador {
 
-    private String nome;
+    private String nomeJogador;
+    private Time time;
 
     public Jogador(String nome) {
-        this.nome = nome;
+        this.nomeJogador = nome;
     }
 
-    public String getNome() {
-        return nome;
+//    public Jogador(String nomeJogador, Time time) {
+//        this.nomeJogador = nomeJogador;
+//        this.time = time;
+//    }
+
+    public void imprimirJogador() {
+        System.out.println(this.nomeJogador);
+        if (time != null){
+            System.out.println(time.getNomeTime());
+        }
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public Time getTime() {
+        return time;
     }
 
-    public void imprimir() {
-        System.out.println(this.nome);
+    public void setTime(Time time) {
+        this.time = time;
     }
+
+    public String getNomeJogador() {
+        return nomeJogador;
+    }
+
+    public void setNomeJogador(String nomeJogador) {
+        this.nomeJogador = nomeJogador;
+    }
+
 }
