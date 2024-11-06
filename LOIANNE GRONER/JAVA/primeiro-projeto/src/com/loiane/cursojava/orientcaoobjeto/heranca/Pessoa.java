@@ -7,6 +7,19 @@ public class Pessoa {
     private String telefone;
     private String cpf;
 
+    protected String nomeVisibilidade;
+
+    public Pessoa() {
+        super();
+    }
+
+    public Pessoa(String nome, String endereco, String telefone) {
+        super();
+        this.nome = nome;
+        this.endereco = endereco;
+        this.telefone = telefone;
+    }
+
     private String telefoneCelular;
 
     public String getTelefoneCelular() {

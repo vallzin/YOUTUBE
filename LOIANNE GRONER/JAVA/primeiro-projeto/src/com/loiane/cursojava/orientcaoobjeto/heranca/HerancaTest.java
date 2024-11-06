@@ -17,7 +17,7 @@ public class HerancaTest {
 
         */
 
-        Pessoa aluno = new Aluno();
+//        Pessoa aluno = new Aluno();
 
         //aluno.getNome();
 
