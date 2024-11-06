@@ -2,6 +2,7 @@ package academy.devdojo.maratonajava.javacore.Jmodificadorfinal.test;
 
 import academy.devdojo.maratonajava.javacore.Jmodificadorfinal.dominio.Carro;
 import academy.devdojo.maratonajava.javacore.Jmodificadorfinal.dominio.Comprador;
+import academy.devdojo.maratonajava.javacore.Jmodificadorfinal.dominio.Ferrari;
 
 public class CarroTest01 {
 
@@ -12,6 +13,10 @@ public class CarroTest01 {
         System.out.println(carro.COMPRADOR);
         carro.COMPRADOR.setNome("MacLaren");
         System.out.println(carro.COMPRADOR);
+
+        Ferrari ferrari = new Ferrari();
+        ferrari.setNome("Enzo");
+        ferrari.imprimirCarro();
 
     }
 }
