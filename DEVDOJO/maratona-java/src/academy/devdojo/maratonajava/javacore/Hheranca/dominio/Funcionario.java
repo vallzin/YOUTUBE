@@ -4,9 +4,16 @@ public class Funcionario extends Pessoa {
 
     private double salario;
 
-    public void imprimirPessoa() {
-        super.imprimirPessoa();
-        System.out.println(this.salario);
+    static {
+        System.out.println("Dentro do bloco inicialização estático de Funcionário");
+    }
+
+    {
+        System.out.println("Dentro do bloco inicialização de Funcionário 1");
+    }
+
+    {
+        System.out.println("Dentro do bloco inicialização de Funcionário 2");
     }
 
     public Funcionario(String nome) {
@@ -14,6 +21,12 @@ public class Funcionario extends Pessoa {
         //não pode haver juntos super() e this(),
         // pois ambos devem ser primeira linha
         super(nome);
+        System.out.println("Dentro do construtor de Funcionário");
+    }
+
+    public void imprimirPessoa() {
+        super.imprimirPessoa();
+        System.out.println(this.salario);
     }
 
     public void relatorioPagamento() {

@@ -6,7 +6,20 @@ public class Pessoa {
     protected String cpf;
     protected Endereco endereco;
 
+    static {
+        System.out.println("Dentro do bloco inicialização estático de Pessoa");
+    }
+
+    {
+        System.out.println("Dentro do bloco inicialização de Pessoa 1");
+    }
+
+    {
+        System.out.println("Dentro do bloco inicialização de Pessoa 2");
+    }
+
     public Pessoa(String nome){
+        System.out.println("Dentro do construtor Pessoa");
         this.nome = nome;
     }
 
