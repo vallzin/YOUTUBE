@@ -1,6 +1,6 @@
-package com.loiane.cursojava.orientcaoobjeto.heranca;
+package com.loiane.cursojava.orientcaoobjeto.heranca.test3;
 
-public class Professor extends Pessoa{
+public class Professor extends Pessoa {
 
     private double salario;
     private String nomeCurso;
@@ -23,6 +23,13 @@ public class Professor extends Pessoa{
 
     public double calcularSalarioLiquido(){
         return 0;
+    }
+
+    public String obterEtiquetaEndereco(){
+        String s = "Endereço do Professor: ";
+        s += super.getEndereco();
+
+        return s;
     }
 
 }

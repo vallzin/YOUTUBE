@@ -1,4 +1,4 @@
-package com.loiane.cursojava.orientcaoobjeto.heranca;
+package com.loiane.cursojava.orientcaoobjeto.heranca.test3;
 
 public class Pessoa {
 
@@ -7,14 +7,10 @@ public class Pessoa {
     private String telefone;
     private String cpf;
 
-    protected String nomeVisibilidade;
-
     public Pessoa() {
-        super();
     }
 
     public Pessoa(String nome, String endereco, String telefone) {
-        super();
         this.nome = nome;
         this.endereco = endereco;
         this.telefone = telefone;
@@ -61,4 +57,9 @@ public class Pessoa {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+    public String obterEtiquetaEndereco(){
+        return  endereco;
+    }
+
 }

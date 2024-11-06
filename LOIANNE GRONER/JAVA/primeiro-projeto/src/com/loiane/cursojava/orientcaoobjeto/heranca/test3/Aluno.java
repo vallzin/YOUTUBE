@@ -1,6 +1,4 @@
-package com.loiane.cursojava.orientcaoobjeto.heranca.test2.test;
-
-import com.loiane.cursojava.orientcaoobjeto.heranca.test.Pessoa;
+package com.loiane.cursojava.orientcaoobjeto.heranca.test3;
 
 public class Aluno extends Pessoa {
 
@@ -47,6 +45,13 @@ public class Aluno extends Pessoa {
         super.setCpf("4567897956");
 
         this.setCpf("78896546");
+    }
+
+    public String obterEtiquetaEndereco(){
+        String s = "Endereço do Aluno: ";
+        s += super.getEndereco();
+
+        return s;
     }
 
 }

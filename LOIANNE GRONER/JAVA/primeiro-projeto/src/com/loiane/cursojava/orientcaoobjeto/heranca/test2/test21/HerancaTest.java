@@ -1,4 +1,4 @@
-package com.loiane.cursojava.orientcaoobjeto.heranca;
+package com.loiane.cursojava.orientcaoobjeto.heranca.test2.test21;
 
 public class HerancaTest {
 
