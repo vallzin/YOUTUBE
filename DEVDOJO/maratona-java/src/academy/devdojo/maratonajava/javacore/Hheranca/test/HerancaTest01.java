@@ -12,8 +12,7 @@ public class HerancaTest01 {
         end.setRua("Rua X");
         end.setCep("0123456-789");
 
-        Pessoa pessoa = new Pessoa();
-        pessoa.setNome("Uzumaki Naruto");
+        Pessoa pessoa = new Pessoa("Uzumaki Naruto");
         pessoa.setCpf("12312312123");
         pessoa.setEndereco(end);
 
@@ -23,8 +22,7 @@ public class HerancaTest01 {
         end1.setRua("Rua II");
         end1.setCep("0126-789");
 
-        Funcionario func = new Funcionario();
-        func.setNome("Joaquim");
+        Funcionario func = new Funcionario("Joaquim");
         func.setCpf("45454546545");
         func.setEndereco(end1);
         func.setSalario(12345);
