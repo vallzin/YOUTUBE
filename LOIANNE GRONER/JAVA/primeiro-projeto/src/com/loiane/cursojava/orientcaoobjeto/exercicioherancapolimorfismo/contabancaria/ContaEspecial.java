@@ -1,6 +1,6 @@
-package com.loiane.cursojava.orientcaoobjeto.exercicioherancapolimorfismo;
+package com.loiane.cursojava.orientcaoobjeto.exercicioherancapolimorfismo.contabancaria;
 
-public class ContaEspecial extends ContaBancaria{
+public class ContaEspecial extends ContaBancaria {
 
     private double limite;
 

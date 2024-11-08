@@ -1,8 +1,8 @@
-package com.loiane.cursojava.orientcaoobjeto.exercicioherancapolimorfismo;
+package com.loiane.cursojava.orientcaoobjeto.exercicioherancapolimorfismo.contabancaria;
 
 import java.util.Calendar;
 
-public class ContaPoupanca extends ContaBancaria{
+public class ContaPoupanca extends ContaBancaria {
 
     private int diaRendimento;
 

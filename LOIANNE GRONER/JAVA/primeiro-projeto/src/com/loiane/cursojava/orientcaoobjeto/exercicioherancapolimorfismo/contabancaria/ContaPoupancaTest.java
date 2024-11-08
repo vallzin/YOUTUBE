@@ -1,4 +1,4 @@
-package com.loiane.cursojava.orientcaoobjeto.exercicioherancapolimorfismo;
+package com.loiane.cursojava.orientcaoobjeto.exercicioherancapolimorfismo.contabancaria;
 
 import java.util.Scanner;
 
