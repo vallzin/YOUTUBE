@@ -9,8 +9,8 @@ public class funcionarioTest01 {
     public static void main(String[] args) {
 
 //        Funcionario funcionario = new Funcionario("Zorro",2000);
-        Gerente gerente = new Gerente("Fulêro",20000);
-        Desenvolvedor desenvolvedor = new Desenvolvedor("Caguya", 2500);
+        Gerente gerente = new Gerente("Fulêro",5000);
+        Desenvolvedor desenvolvedor = new Desenvolvedor("Caguya", 1000);
 
 
 //        System.out.println(funcionario);
