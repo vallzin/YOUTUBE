@@ -6,9 +6,7 @@ public class Cliente {
     private TipoCliente tipoCliente;
     TipoPagamento tipoPagamento;
 
-    public enum TipoPagamento{
-        DEBITO, CREDITO
-    }
+
 
     public Cliente(String cliente, TipoCliente tipoCliente,
                    TipoPagamento tipoPagamento) {
