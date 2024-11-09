@@ -2,8 +2,8 @@ package academy.devdojo.maratonajava.javacore.Kenum.dominio;
 
 public class Cliente {
 
-    private String cliente;
-    private TipoCliente tipoCliente;
+    private final String cliente;
+    private final TipoCliente tipoCliente;
     TipoPagamento tipoPagamento;
 
 
