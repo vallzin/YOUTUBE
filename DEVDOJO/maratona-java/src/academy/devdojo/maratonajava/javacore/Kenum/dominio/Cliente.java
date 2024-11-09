@@ -4,33 +4,26 @@ public class Cliente {
 
     private String cliente;
     private TipoCliente tipoCliente;
+    TipoPagamento tipoPagamento;
 
-    public Cliente(String cliente, TipoCliente tipoCliente) {
+    public enum TipoPagamento{
+        DEBITO, CREDITO
+    }
+
+    public Cliente(String cliente, TipoCliente tipoCliente,
+                   TipoPagamento tipoPagamento) {
         this.cliente = cliente;
         this.tipoCliente = tipoCliente;
+        this.tipoPagamento = tipoPagamento;
     }
 
     @Override
     public String toString() {
         return "Cliente{" +
                 "cliente='" + cliente + '\'' +
-                ", tipoCliente=" + tipoCliente +
+                ", tipoCliente=" + tipoCliente.getNomeRelatorio() +
+                ", tipoClienteInt=" + tipoCliente.VALOR +
+                ", tipoPagamento=" + tipoPagamento +
                 '}';
-    }
-
-    public String getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(String cliente) {
-        this.cliente = cliente;
-    }
-
-    public TipoCliente getTipoCliente() {
-        return tipoCliente;
-    }
-
-    public void setTipoCliente(TipoCliente tipoCliente) {
-        this.tipoCliente = tipoCliente;
     }
 }
