@@ -54,6 +54,7 @@ public class Piramide extends Figura3D{
         if(base != null) {
             return (numPoliBase * ((arestaBase * altura) / 2)) + base.calcularArea();
         }
+        return 0;
     }
 
     @Override
@@ -61,7 +62,6 @@ public class Piramide extends Figura3D{
         if(base != null){
             return (base.calcularArea() * altura) / 3;
         }
-
         return 0;
     }
 }
