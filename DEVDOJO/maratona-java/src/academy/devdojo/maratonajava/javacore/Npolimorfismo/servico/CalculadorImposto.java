@@ -29,6 +29,19 @@ public class CalculadorImposto {
         System.out.println("Produto: " + produto.getNome());
         System.out.println("Preço: " + produto.getValor());
         System.out.println("Imposto a ser pago: " + imposto);
+        //usando instanceof
+//        if (produto instanceof Tomate) {
+//            Tomate tomate = (Tomate) produto;
+//            System.out.println(tomate.getDataValidade());
+//        }
+        //segunda forma de usar o instanceof
+//        if (produto instanceof Tomate){
+//            System.out.println(((Tomate) produto).getDataValidade());
+//        }
+        if (produto instanceof Tomate){
+            String dataValidade = ((Tomate) produto).getDataValidade();
+            System.out.println(dataValidade);
+        }
     }
 
 }
