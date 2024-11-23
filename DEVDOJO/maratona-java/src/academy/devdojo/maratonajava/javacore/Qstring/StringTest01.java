@@ -5,7 +5,7 @@ public class StringTest01 {
     public static void main(String[] args) {
         String name = "william";//string constant pool
         String name2 = "william";
-        name = name.concat(" sergio");
+        name = name.concat(" sergio");// nome += " sergio";
         System.out.println(name);
         System.out.println(name.equals(name2));
         //1 - criando uma variável de referência;
